@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'Pier';
+  src: url("../assets/fonts/pier/piersans-regular.otf") format("opentype"), url("../assets/fonts/pier/piersans-medium-italic.otf") format("opentype"), url("../assets/fonts/pier/piersans-medium.otf") format("opentype"); }
+@font-face {
+  font-family: 'Basic';
+  src: url("../assets/fonts/basic/Basicregular.ttf") format("truetype"); }

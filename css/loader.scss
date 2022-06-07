@@ -1,0 +1,89 @@
+@import "colors";
+@mixin grid{
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  justify-content: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+  align-content: center;
+  -webkit-align-content: center;
+}
+@mixin cell{
+  width: 10px;
+  height: 10px;
+  background: $cell-bg-color;
+  border-radius: 50%;
+  margin: 2px;
+}
+.container-loader {
+    @include grid;
+    height: 70px;
+    width: 70px;
+    text-align: center;
+}
+.container-loader:nth-child(4){
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+}
+
+.cell-4{
+  @include cell;
+}
+
+$tick: 5;
+@for $i from 1 to 26 {
+  .cell-4:nth-child(#{$i}){
+    animation: quick-glow 1s unquote( (0.1 * $tick) + 's') infinite linear;
+    -webkit-animation: quick-glow 1s unquote( (0.1 * $tick) + 's') infinite linear;
+    $tick: $tick - 1;
+  }
+}
+$tick: 0;
+@for $i from 6 to 11 {
+  .cell-4:nth-child(#{$i}){
+    animation: quick-glow 1s unquote( (0.1 * $tick) + 's') infinite linear;
+    -webkit-animation: quick-glow 1s unquote( (0.1 * $tick) + 's') infinite linear;
+  }
+  $tick: $tick + 1;
+}
+$tick: 0;
+@for $i from 16 to 21 {
+  .cell-4:nth-child(#{$i}){
+    animation: quick-glow 1s unquote( (0.1 * $tick) + 's') infinite linear;
+    -webkit-animation: quick-glow 1s unquote( (0.1 * $tick) + 's') infinite linear;
+    $tick: $tick + 1;
+  }
+}
+@keyframes quick-glow{
+  15%{
+    z-index: 99;
+    background: $glow-color;
+    box-shadow: 0 0 10px 2px $glow-color;
+  }
+}
+
+@keyframes glow{
+  50%{
+    z-index: 99;
+    background: $glow-color;
+    box-shadow: 0 0 10px 2px $glow-color;
+  }
+}
+
+@-webkit-keyframes quick-glow{
+  15%{
+    z-index: 99;
+    background: $glow-color;
+    box-shadow: 0 0 10px 2px $glow-color;
+  }
+}
+
+@-webkit-keyframes glow{
+  50%{
+    z-index: 99;
+    background: $glow-color;
+    box-shadow: 0 0 10px 2px $glow-color;
+  }
+}

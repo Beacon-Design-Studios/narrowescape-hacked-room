@@ -1,0 +1,67 @@
+@import "boilerplate";
+@import "colors";
+@import "fonts";
+@import "loader";
+
+html {
+    background-color: $tertiary-color-1;
+}
+body {
+    background-color: $tertiary-color-1;
+    color: $primary-color-1;
+    font-family: "Basic", sans-serif;
+}
+.header {
+    padding: 20px;
+}
+::selection {
+  background: $primary-color; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: $primary-color; /* Gecko Browsers */
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.input {
+    background-color: $primary-color-1;
+    height: 60px;
+    font-family: "Basic", sans-serif;
+    font-size: 1.5em;
+    color: $tertiary-color;
+    text-align: center;
+    animation: quick-glow 5s infinite linear;
+    -webkit-animation: quick-glow 5s infinite linear;
+}
+.entry {
+    background-color: $tertiary-color;
+    border-radius: 20px;
+    margin: 30px 0px;
+    :nth-child(2) {
+        padding: 20px;
+    }
+    .cell-4 {
+        vertical-align: middle;
+        margin-top: 40px;
+    }
+}
+.main {
+    font-family: "Basic", sans-serif;
+    font-size: 1.8em;
+    color: $primary-color-1;
+    padding: 30px;
+    margin: 15px 0px;
+}
+.neon-text {
+    text-shadow: 0 0 10px $primary-color-1, 0 0 20px $primary-color-1, 0 0 30px $primary-color-1, 0 0 40px $secondary-color;
+}
+.label {
+    color: $primary-color-1;
+    padding: 20px;
+    text-align: center;
+}
+.reward {
+    color: $primary-color;
+}
